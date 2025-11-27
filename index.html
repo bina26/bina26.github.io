@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <title>Portfollio</title>
+
+        <link rel="icon" type="image/jpeg" href="images/2.jpg">
+
+    </head>
+    <body>
+        <!-- NAVBAR-->
+        <nav>
+
+            <div class="left">
+                <a href="/">Binayak Upadhyaya</a>
+            </div>
+
+            <div class="right">
+
+                <button id="theme-toggle" aria-label="Switch to Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="https://github.com/bina26" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/binayak-upadhyaya-587993324/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="mailto:upadhyayabinayak@gmail.com" aria-label="Mail me">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+
+            </div>
+        </nav>
+
+        <main>
+            <!--SECTION 1: HERO-->
+            <section class="hero-section">
+                <div class="text" data-aos="fade-up" data-aos-duration="1000">
+
+                    <h2>Hi, I'm <span style="color: var(--link-color);">Binayak</span>👋</h2>
+
+                    <h3 style="font-size: 32px; margin: 10px 0;">
+                        I am a <span class="auto-type" style="color: var(--link-color);"></span>
+                    </h3>
+
+                    <p>I am an aspiring software developer currently building my technical foundation. I have a basic understanding of C, C++, and 
+                        Python, and I am actively learning Java and Data Structures (DSA) to strengthen my problem-solving skills. I am eager to 
+                        apply what I learn and grow as a developer.</p>
+                    
+                    <div class="links">
+                        <a href="#skills">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Skills</span>
+                        </a>
+
+                        <a href="#projects">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <span>Projects</span>
+                        </a>
+
+                        <a href="#contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="headshot">
+                    <img src="images/2.jpg" alt="Binayak Upadhyaya">
+                </div>
+            </section>
+
+            <!--SECTION 2: SKILLS-->
+            <section id="skills" class="skills-section">
+                <h2>Skills</h2>
+
+                <div class="text">
+                    I am currently building a strong technical foundation with a focus on problem-solving and logic. My goal is to master the core concepts of Computer 
+                    Science using these technologies:
+                </div>
+
+                <div class="cells" data-aos="zoom-in" data-aos-duration="1000">
+
+                    <div class="cell">
+                        <i class="fa-solid fa-code" style="color: #00599C; font-size: 30px;"></i>
+                        <span>C++ (Basic)</span>
+                    </div>
+
+                    <div class="cell">
+                        <i class="fa-brands fa-python" style="color: #3776AB; font-size: 30px;"></i>
+                        <span>Python (Basic)</span>
+                    </div>
+
+                    <div class="cell">
+                        <i class="fa-brands fa-java" style="color: #5382a1; font-size: 30px;"></i>
+                        <span>Java (Learning)</span>
+                    </div>
+
+                    <div class="cell">
+                        <img src="images/html-logo.webp" alt="HTML logo">
+                        <span>HTML</span>
+                    </div>
+
+                    <div class="cell">
+                        <img src="images/css-logo.webp" alt="CSS logo">
+                        <span>CSS</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--SECTION 3: Project-->
+            <section  id="projects" class="projects-section">
+                <h2>Projects</h2>
+
+                <div class="group" style="margin-bottom: 50px;" data-aos="fade-up">
+                    <div class="person-details">
+                        <i class="fa-brands fa-amazon" style="font-size: 100px; color: var(--text-color);"></i>
+                    </div>
+
+                    <div class="text">
+                        <h3>Amazon Homepage Clone</h3>
+                        <p style="margin-bottom: 10px; font-weight: bold; color: var(--link-color);">
+                            HTML5, CSS3, Font Awesome
+                        </p>
+                        <p>
+                            A pixel-perfect visual clone of the Amazon e-commerce homepage.
+                            Features a complex navigation bar, a responsive product grid using Flexbox,
+                            and a detailed multi-part footer replica.
+                        </p>
+                        <br>
+                        <a href="https://github.com/bina26/Amazon_Clone" target="_blank" style="font-weight: 600;">
+                            View Source Code <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group" style="margin-bottom: 50px;" data-aos="fade-up">
+                    <div class="person-details">
+                        <i class="fa-brands fa-user-plus" style="font-size: 100px; color: var(--text-color);"></i>
+                    </div>
+
+                    <div class="text">
+                        <h3>User Registration Form</h3>
+                        <p style="margin-bottom: 10px; font-weight: bold; color: var(--link-color);">
+                            HTML, CSS, JavaScript
+                        </p>
+                        <p>
+                            A clean, dark-themed user registration interface.
+                            Uses client-side JavaScript to handle for submission events, pervent page reloads,
+                            and capture user input to display via a browser alert.
+                        </p>
+                        <br>
+                        <a href="https://github.com/bina26/Login" target="_blank" style="font-weight: 600;">
+                            View Source Code <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group" data-aos="fade-up">
+                    <div class="person-details">
+                        <i class="fa-solid fa-laptop-code" style="font-size: 100px; color: var(--text-color);"></i>
+                    </div>
+
+                    <div class="text">
+                        <h3>Personal Portfolio Website</h3>
+                        <p style="margin-bottom: 10px; font-weight: bold; color: var(--link-color);">
+                            HTML, CSS, JavaScript
+                        </p>
+                        <p>
+                            The site you are looking at right now! Featuring a dark/light mode toggle, 
+                            scroll-to-top functionality, and a mobile-first design architecture.
+                        </p>
+                        <br>
+                        <a href="https://github.com/bina26/bina26.github.io.git" target="_blank" style="font-weight: 600;">
+                            View Source Code <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--SECTION 4: CONTACT-->
+            <section id="contact" class="contact-section">
+                <h2>Contact</h2>
+
+                <div class="group" data-aos="fade-up">
+                    <div class="text">
+                        I am always excited to connect with like-minded developers and discuss technology. If you have any questions about my projects or want to 
+                        collaborate, don't hesitate to drop me a message.
+                    </div>
+
+                    <form id="contactForm">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" cols="30" rows="10" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>Built with ❤️ by <b>Binayak Upadhyaya</b></p>
+                <p class="copyright">&copy; 2025 All Rights Reserved.</p>
+
+                <div class="socials">
+                    <a href="https://github.com/bina26" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/binayak-upadhyaya-587993324/" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <button id="scrollTopBtn" title="Go to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+        <script src="script.js"></script>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>  
