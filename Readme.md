@@ -12,7 +12,7 @@ A fully responsive personal portfolio website designed to showcase my skills, pr
     * **Typing Animation:** Dynamic text in the hero section using `Typed.js`.
     * **Scroll Animations:** Elements fade and zoom in as you scroll using `AOS` (Animate On Scroll).
     * **Scroll-to-Top:** A floating button appears after scrolling down for easy navigation.
-* **Functional Contact Form:** Integrated with **Web3Forms** to send real emails directly from the website without a backend server.
+* **Functional Contact Form:** Integrated with **Formspree** to send real emails directly from the website without a backend server.
 
 ## 🛠️ Technologies Used
 
