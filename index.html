@@ -211,16 +211,18 @@
                     </div>
 
                     <form id="contactForm">
+                        <input type="hidden" name="access_key" value="64f45d7b-c51e-4b47-b07e-4cda0fde884d">
+
                         <label for="name">Name</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
 
                         <label for="email">Email</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
 
                         <label for="message">Message</label>
-                        <textarea id="message" cols="30" rows="10" required></textarea>
+                        <textarea id="message" name="message" cols="30" rows="10" required></textarea>
 
-                        <button type="submit">Send Message</button>
+                        <button type="submit" id="submitBtn">Send Message</button>
                     </form>
                 </div>
             </section>
@@ -229,7 +231,7 @@
         <footer>
             <div class="footer-content">
                 <p>Built with ❤️ by <b>Binayak Upadhyaya</b></p>
-                <p class="copyright">&copy; 2025 All Rights Reserved.</p>
+                <p class="copyright">&copy; <span id="copyright-year"></span> All Rights Reserved.</p>
 
                 <div class="socials">
                     <a href="https://github.com/bina26" target="_blank" aria-label="GitHub">

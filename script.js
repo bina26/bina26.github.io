@@ -63,19 +63,49 @@ var typed = new Typed(".auto-type", {
 
 // CONTACT FORM HANDLER
 const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
 
 if(contactForm){
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); //STOP the page from reloading
+        e.preventDefault();
 
-        // 1. Get the User's Name
-        const nameField = document.getElementById('name');
-        const name = nameField.value;
+        //1. Change button text to show it's loading
+        submitBtn.innerText = "Sending...";
+        submitBtn.disabled = true;
 
-        // 2. Show a friendly success message
-        alert(`Thanks, ${name}! Your message has been received. (This is a demo form).`);
+        //2. Collect the form data
+        const formData = new FormData(contactForm);
 
-        // 3. Clear the form fields
-        contactForm.reset();
+        //3. Send data to Web3Froms API
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(async (response) => {
+            const json = await response.json();
+            if(response.status == 200){
+                //SUCESS
+                const name = document.getElementById('name').value;
+                alert(`Thanks, ${name}! Your message has been sent successfully.`);
+                contactForm.reset(); //Clear the form
+            }
+            else
+            {
+                console.log(response);
+                alert("Something went wrong. Please try again.");
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Something went wrong!");
+        })
+        .finally(() => {
+            //4. Reset button text
+            submitBtn.innerText = "Send Message";
+            submitBtn.disabled = false;
+        });
     });
 }
+
+// --- DYNAMIC COPYRIGHT YEAR ---
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
