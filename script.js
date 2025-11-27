@@ -61,49 +61,54 @@ var typed = new Typed(".auto-type", {
     loop: true
 });
 
-// CONTACT FORM HANDLER
+// --- CONTACT FORM HANDLER (FORMSPREE) ---
 const contactForm = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 
-if(contactForm){
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Stop the page from reloading
 
-        //1. Change button text to show it's loading
+        // 1. Show loading state
         submitBtn.innerText = "Sending...";
         submitBtn.disabled = true;
 
-        //2. Collect the form data
+        // 2. Prepare the data
         const formData = new FormData(contactForm);
 
-        //3. Send data to Web3Froms API
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: formData
-        })
-        .then(async (response) => {
-            const json = await response.json();
-            if(response.status == 200){
-                //SUCESS
+        try {
+            // 3. Send to Formspree (using the action link from HTML)
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json' // This tells Formspree "Don't redirect me!"
+                }
+            });
+
+            // 4. Handle Response
+            if (response.ok) {
+                // Success!
                 const name = document.getElementById('name').value;
-                alert(`Thanks, ${name}! Your message has been sent successfully.`);
-                contactForm.reset(); //Clear the form
+                alert(`Thanks, ${name}! Your message has been sent.`);
+                contactForm.reset();
+            } else {
+                // Error from Formspree
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    alert(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert("Oops! There was a problem sending your form");
+                }
             }
-            else
-            {
-                console.log(response);
-                alert("Something went wrong. Please try again.");
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            alert("Something went wrong!");
-        })
-        .finally(() => {
-            //4. Reset button text
+        } catch (error) {
+            // Network Error
+            alert("Oops! There was a problem submitting your form");
+        } finally {
+            // 5. Reset button
             submitBtn.innerText = "Send Message";
             submitBtn.disabled = false;
-        });
+        }
     });
 }
 
