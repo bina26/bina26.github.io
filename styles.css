@@ -68,7 +68,8 @@ nav .left a{
 
 nav .right a{
     color: var(--text-color);
-    margin: 0 10px;
+    display: flex;
+    align-items: center;
 }
 
 nav .right a:last-child{
@@ -80,6 +81,12 @@ nav .right a:last-child{
 
 nav .right a span {
     margin-left: 5px;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Creates consistent space between icons */
 }
 
 /* SECTION-1 */
@@ -275,7 +282,7 @@ nav .right a span {
 }
 
 #scrollTopBtn{
-    display: block;
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -422,5 +429,14 @@ footer .socials a:hover{
     nav .right a{
         font-size: 20px;
         margin: 0 5px;
+    }
+
+    nav .right {
+        gap: 10px;
+    }
+
+    nav .right a,
+    nav .right button{
+        font-size: 18px;
     }
 }
